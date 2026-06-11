@@ -1,54 +1,283 @@
-IntervuDesk Technical Interview Platform IntervuDesk is a comprehensive platform designed to streamline technical interviews with real-time coding, video meetings, and automated assessment tools.
+<div align="center">
 
-Features For Interviewers User Role Management: Easily switch users between candidate and interviewer roles Video Call Creation: Start instant meetings or schedule future interviews Recording Management: Access, share and delete interview recordings Real-time Code Observation: Watch candidates solve problems in real-time Custom Problem Library: Choose from various coding challenges or add your own For Candidates Integrated Coding Environment: Solve problems in JavaScript, Python, Java, or C++ Multiple Question Types: Practice with a variety of algorithm and data structure problems Live Code Execution: Run and test code directly in the browser Interview Preparation: Access scheduled interviews and meeting links Collaborative Features Real-time Code Sharing: Synchronized code editing with multiple participants Video Conferencing: High-quality video meetings with screen sharing Interview Recording: Automatically save interviews for later review Shared Code Execution: Everyone can run and test the code during interviews Tech Stack Frontend: Next.js, React, TypeScript UI Components: Shadcn UI, Tailwind CSS Authentication: Clerk Database: Convex Video/Audio: Stream.io SDK Code Editor: Monaco Editor (VSCode's editor) Code Execution: Judge0 API Installation
+# 🚀 IntervuDesk
 
-# Clone the repository
-git clone https://github.com/your-username/intervudesk.git
+### Real-Time Technical Interview & Coding Assessment Platform
 
-# Navigate to project directory
-cd intervudesk
+Conduct coding interviews with collaborative coding, live video communication, interview scheduling, and candidate evaluation — all in one platform.
 
-# Install dependencies
-npm install
+---
 
-# Set up environment variables
-cp .env.example .env.local
+![Next.js](https://img.shields.io/badge/Next.js-14-black)
+![React](https://img.shields.io/badge/React-18-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
+![Clerk](https://img.shields.io/badge/Auth-Clerk-purple)
+![MongoDB](https://img.shields.io/badge/Database-MongoDB-green)
+![Convex](https://img.shields.io/badge/Realtime-Convex-orange)
+![Stream](https://img.shields.io/badge/Video-Stream-red)
+![TailwindCSS](https://img.shields.io/badge/UI-TailwindCSS-cyan)
 
-# Start development server
-npm run dev
+---
 
+### 🎯 Built to Simulate Real Software Engineering Interviews
 
-Environment Setup Create a .env.local file with the following variables:
+</div>
 
-# Clerk Authentication
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-CLERK_SECRET_KEY=
+---
 
-# Stream.io for Video
-NEXT_PUBLIC_STREAM_API_KEY=
-STREAM_SECRET=
+## 🌟 Project Overview
 
-# Judge0 for Code Execution
-NEXT_PUBLIC_RAPIDAPI_KEY=
-NEXT_PUBLIC_RAPIDAPI_HOST=
+IntervuDesk is a modern technical interview platform designed to streamline coding interviews through an integrated environment that combines:
 
-# Convex Database
-NEXT_PUBLIC_CONVEX_URL=
-Usage Sign Up/Login: Create an account or log in using email or SSO Role Selection: Users start as candidates; admin can promote to interviewer status Creating Interviews: Interviewers can schedule and start interview sessions Joining Interviews: Candidates receive links to join scheduled interviews Coding Environment: Solve problems in preferred language with real-time execution Recordings: Access past interview recordings for review and feedback Project Structure
+✔️ Live Video Interviews
 
-├── convex/                  # Convex database functions and schema
-├── public/                  # Static assets
-└── src/
-    ├── actions/             # Server actions
-    ├── app/                 # Next.js app router pages
-    │   ├── (admin)/         # Admin-only routes
-    │   ├── (root)/          # Main application routes
-    │   └── api/             # API routes
-    ├── components/          # React components
-    ├── constants/           # Application constants
-    ├── hooks/               # Custom React hooks
-    ├── lib/                 # Utility functions
-    └── models/              # Data models
+✔️ Collaborative Coding Sessions
 
+✔️ Real-Time Code Synchronization
 
-Acknowledgments Clerk for authentication Stream.io for video functionality Convex for database Shadcn UI for UI components Judge0 for code execution
+✔️ Interview Scheduling
+
+✔️ Recording Management
+
+✔️ Candidate Assessment
+
+✔️ Secure Authentication
+
+✔️ Modern Dashboard Experience
+
+The platform recreates the real-world technical interview process used by leading technology companies.
+
+---
+
+## 📸 Platform Highlights
+
+| Feature | Description |
+|----------|------------|
+| 🎥 Live Interviews | HD video interviews using Stream SDK |
+| 💻 Collaborative Coding | Real-time shared coding environment |
+| 🔐 Secure Authentication | Clerk-based authentication and authorization |
+| 📅 Interview Scheduling | Create and manage interview sessions |
+| 🎬 Recording System | Store and review interview recordings |
+| 👨‍💼 Interviewer Dashboard | Manage interviews and candidates |
+| 👨‍💻 Candidate Dashboard | Access interviews and coding challenges |
+| ⚡ Real-Time Updates | Convex-powered synchronization |
+
+---
+
+# 🏗️ System Architecture
+
+```text
+┌────────────────────────────────────────────┐
+│                  Frontend                  │
+│         Next.js + React + TypeScript       │
+└────────────────────────────────────────────┘
+                     │
+                     ▼
+┌────────────────────────────────────────────┐
+│              Authentication                │
+│                   Clerk                    │
+└────────────────────────────────────────────┘
+                     │
+                     ▼
+┌────────────────────────────────────────────┐
+│             Business Logic Layer           │
+│     Interview • Coding • Scheduling        │
+└────────────────────────────────────────────┘
+                     │
+      ┌──────────────┼──────────────┐
+      ▼              ▼              ▼
+
+  Stream SDK      Convex DB      MongoDB
+
+(Video Calls)   (Realtime Data)  (Storage)
+
+      ▼              ▼              ▼
+
+┌────────────────────────────────────────────┐
+│              User Experience               │
+│ Interviewers • Candidates • Admins         │
+└────────────────────────────────────────────┘
+```
+
+---
+
+# ✨ Core Functionalities
+
+## 🔐 Authentication Module
+
+- User Registration
+- User Login
+- Session Management
+- Route Protection
+- Role-Based Access Control
+- Secure Authentication via Clerk
+
+---
+
+## 🎥 Video Interview Module
+
+- HD Video Calls
+- Audio Communication
+- Participant Management
+- Screen Sharing
+- Interview Rooms
+- Live Meeting Controls
+
+---
+
+## 💻 Collaborative Coding Module
+
+- Monaco Editor Integration
+- VS Code-like Experience
+- Syntax Highlighting
+- Multiple Programming Languages
+- Real-Time Code Synchronization
+- Live Collaboration
+
+---
+
+## 📅 Interview Scheduling Module
+
+- Schedule Interviews
+- Manage Upcoming Sessions
+- Track Completed Interviews
+- Generate Meeting Links
+- Candidate Invitations
+
+---
+
+## 🎬 Recording Management Module
+
+- Automatic Recording
+- Recording Storage
+- Interview Playback
+- Performance Review
+- Historical Records
+
+---
+
+## 📊 Dashboard Module
+
+### Interviewer Dashboard
+
+- Manage Interviews
+- Review Recordings
+- Monitor Candidates
+- Create Sessions
+
+### Candidate Dashboard
+
+- Join Interviews
+- Access Coding Challenges
+- Track Interview Status
+- Review Upcoming Sessions
+
+---
+
+# 🛠️ Technology Stack
+
+<table>
+<tr>
+<td><b>Frontend</b></td>
+<td>Next.js 14, React 18, TypeScript</td>
+</tr>
+
+<tr>
+<td><b>Authentication</b></td>
+<td>Clerk</td>
+</tr>
+
+<tr>
+<td><b>Database</b></td>
+<td>MongoDB, Mongoose, Convex</td>
+</tr>
+
+<tr>
+<td><b>Video Communication</b></td>
+<td>Stream Video SDK</td>
+</tr>
+
+<tr>
+<td><b>Code Editor</b></td>
+<td>Monaco Editor</td>
+</tr>
+
+<tr>
+<td><b>Styling</b></td>
+<td>Tailwind CSS, ShadCN UI, Radix UI</td>
+</tr>
+
+<tr>
+<td><b>Language</b></td>
+<td>TypeScript</td>
+</tr>
+</table>
+
+---
+
+# 📂 Project Structure
+
+```bash
+IntervuDesk
+│
+├── src
+│   ├── app
+│   ├── components
+│   ├── actions
+│   ├── hooks
+│   ├── constants
+│   ├── lib
+│   └── models
+│
+├── convex
+├── public
+├── package.json
+└── README.md
+```
+
+---
+
+# 🎯 Key Achievements
+
+✅ Secure Authentication System
+
+✅ Role-Based Access Control
+
+✅ Real-Time Video Communication
+
+✅ Collaborative Coding Environment
+
+✅ Interview Scheduling System
+
+✅ Recording Management
+
+✅ Modern Responsive UI
+
+✅ Real-Time Synchronization
+
+✅ Full-Stack Architecture
+
+✅ Production-Ready Design
+
+---
+
+# 🚀 Future Enhancements
+
+- AI Interview Evaluation
+- Automated Feedback Reports
+- Coding Performance Analytics
+- Resume Analysis
+- AI Question Generator
+- Multi-Round Interview Workflow
+- Recruiter Dashboard
+- Organization Management
+
+---
+
+# 👨‍💻 Author
+
+### Yuvraj Kumar
+
+Full Stack Developer | Technical Interview Platform
+
+Built with ❤️ using Next.js, TypeScript, Clerk, Convex, MongoDB, Stream SDK, Monaco Editor and Tailwind CSS.
