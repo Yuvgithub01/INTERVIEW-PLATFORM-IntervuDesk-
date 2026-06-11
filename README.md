@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 IntervuDesk
 Technical Interview Platform
 IntervuDesk is a comprehensive platform designed to streamline technical interviews with real-time coding, video meetings, and automated assessment tools.
@@ -99,3 +100,7 @@ Stream.io for video functionality
 Convex for database
 Shadcn UI for UI components
 Judge0 for code execution
+=======
+# INTERVIEW-PLATFORM-IntervuDesk-
+IntervuDesk Technical Interview Platform IntervuDesk is a comprehensive platform designed to streamline technical interviews with real-time coding, video meetings, and automated assessment tools.
+>>>>>>> 4c06118a717eac2dde2ba980036f3529ff9a65fa
